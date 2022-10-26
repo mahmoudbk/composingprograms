@@ -1,0 +1,7 @@
+we can use functions as returned values, a one simple way to explain that is through the mathematical function composition:
+for instance if we have f(x) as a function and g(x) as another functions we can define h(x) their composition as follows : h(x) = f(g(x)) 
+
+so for example if f(x) = x + 1 and g(x) = x^2 
+then h(2) = 5 
+
+i demonstrate that in the code composition.py
