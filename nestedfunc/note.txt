@@ -1,0 +1,4 @@
+closuers ? 
+oh this mysterious word for python begginners ! closuers are basically functions that are defined
+inside other functions and they take the parent function as their environment so they have some sort 
+of memory and access to their parent function variables and so on, i show an example of that on this nested.py code, i hope that does make sense 
