@@ -1,0 +1,19 @@
+We can all agree that the golden ratio concept is fascinating and beautiful 
+as a programmer if we think about writing some code to calculate it or at least get an approximation 
+we know that the golden ratio can be represented as :
+a/b = a+b/a = 1+b/a which we can get from the golden ratio multiple representation lets call it phi 
+phi  = 1/phi +1 , (phi^2) = phi+1
+
+which means that we can get a more or less good approximation if we just perform a simple for loop (in python for exp) :
+
+guess = 1
+
+for i in range(n):
+	guess = 1/guess + 1 
+
+where the bigger n is the better approximation we get or we can use recursion and define some functions 
+to detect whether or not the approximation is close enough .. 
+ 
+
+resources  : https://composingprograms.com/pages/16-higher-order-functions.html
+youtube : https://www.youtube.com/watch?v=5zosU6XTgSY&t=635s 
