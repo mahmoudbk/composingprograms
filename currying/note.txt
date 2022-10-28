@@ -1,0 +1,5 @@
+the point of currying is to abstract certain functions so for example if a function takes 
+two arguments f(x,y) for instance we can make that into a g(x)(y)  where g is a function that takes
+one argument x and returns a function which takes another argument y so it would look like something in the code where i give an example of the pow function
+
+Some programming languages, such as Haskell, only allow functions that take a single argument, so the programmer must curry all multi-argument procedures. In more general languages such as Python, currying is useful when we require a function that takes in only a single argument. 
