@@ -1,0 +1,7 @@
+newton is one of the invetentors of calculus if not the inventor so he gets to play with it and use it 
+in order to solve other problems be it in math, physics of engineering 
+what we want to do here is finding the roots of an equation or what is called the zeros of a function 
+and it turned out that we can use that to approximate the square root of positive number 
+so for instance if we are trying to get an approximation of the sqauare root of 3 we can turn that into a quadratic equation where sqrt(3) is a solution and we try to approximate it so algebrically that would look something like this :
+x=sqrt(3) --> x^2 = 3 --> x^2-3 = 0 
+
