@@ -29,9 +29,28 @@ def square_root_newton(a):
     
     return find_zero(f,df)
 
-print(square_root_newton(2))
+#print(square_root_newton(2))
 #>>> 1.4142135623730951
-print(square_root_newton(64))
+#print(square_root_newton(64))
 #>>> 8.0
 
+
+""" generalizing the calculation of f(x)=  x^n -a and its derivative"""
+
+def power(x,n):
+    result,i = x,1
+
+    while i <n:
+        result = result*x
+        i = i+1
+    return result
+
+def n_root_newton(a,n):
+    def f(x):
+        return power(a,n) -a
+    def df(x):
+        return n*power(a,n-1)
+
+    return find_zero(f,df)
+print(power(2,3))
 

@@ -5,3 +5,6 @@ and it turned out that we can use that to approximate the square root of positiv
 so for instance if we are trying to get an approximation of the sqauare root of 3 we can turn that into a quadratic equation where sqrt(3) is a solution and we try to approximate it so algebrically that would look something like this :
 x=sqrt(3) --> x^2 = 3 --> x^2-3 = 0 
 
+As you experiment with Newton's method, be aware that it will not always converge. The initial guess of improve must be sufficiently close to the zero, and various conditions about the function must be met. Despite this shortcoming, Newton's method is a powerful general computational method for solving differentiable equations
+. Very fast algorithms for logarithms and large integer division employ variants of the technique in modern computers.
+resources : https://composingprograms.com/pages/16-higher-order-functions.html#defining-functions-iii-nested-definitions
