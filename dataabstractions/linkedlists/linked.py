@@ -56,14 +56,31 @@ def len_link(s):
 """
 
 def get_item(s,i):
-    assert i<=len_link(s)
-    j = 0
-    while j<i:
-        j+=1
+    assert i<=len_link(s),'list index out of range'
+    
+    while i>0:
+        i-=1
         s = rest(s)
         
     return first(s)
+
+print(get_item(four,1))
 """
 >>> get_item(four,1)
 2
 """
+"""
+make len_link and get_item recursive 
+"""
+
+def len_link_recursive(s):
+    if s==empty:
+        return 0
+  
+    return  1 + len_link_recursive(rest(s))
+
+def get_item_recursive(s,i):
+    if i==0:
+        return first(s)
+ 
+    return get_item_recursive(rest(s),i-1)
