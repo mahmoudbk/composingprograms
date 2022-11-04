@@ -44,10 +44,26 @@ def len_link(s):
     L=0
     if s==empty:
         return L
-    head = first(s)
-    while rest(head)!=empty:
-        L+=1
-        head = first(rest(head))
-    return L
-print(len_link(four))
    
+    while s!=empty:
+        L+=1
+        s = rest(s)
+    return L
+
+"""
+>>> len_link(four)
+4
+"""
+
+def get_item(s,i):
+    assert i<=len_link(s)
+    j = 0
+    while j<i:
+        j+=1
+        s = rest(s)
+        
+    return first(s)
+"""
+>>> get_item(four,1)
+2
+"""
