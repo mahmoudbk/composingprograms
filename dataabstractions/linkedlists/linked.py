@@ -29,8 +29,7 @@ def rest(s):
     return s[1]
 
 four = link(1,link(2,link(3,link(4,empty))))
-print(first(four))
-print(rest(four))
+
 
 """
 >>> four = link(1,link(2,link(3,link(4,empty))))
@@ -39,3 +38,16 @@ print(rest(four))
 >>> rest(four)
 [2,[3,[4,"empty"]]]
 """
+
+#lets get the list length 
+def len_link(s):
+    L=0
+    if s==empty:
+        return L
+    head = first(s)
+    while rest(head)!=empty:
+        L+=1
+        head = first(rest(head))
+    return L
+print(len_link(four))
+   
