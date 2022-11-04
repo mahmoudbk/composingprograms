@@ -64,7 +64,6 @@ def get_item(s,i):
         
     return first(s)
 
-print(get_item(four,1))
 """
 >>> get_item(four,1)
 2
@@ -114,6 +113,25 @@ def keep_if_link(f,s):
     if s==empty:
         return s
     else :
-        if (f(s)):
-            return link(f(first(s)),keep_if_link(rest(s),f))
+        kept = keep_if_link(f,rest(s))
+        
+        if (f(first(s))):
+            return link(first(s),kept)
+        else :
+            return kept
+
+
+
+"""
+>>> keep_if_link(lambda x:x%2==0,four)
+[2, [4, 'empty']]
+"""
     
+def join_link(s,separator):
+    """Return a string of all elements in a s seperated by a separator"""
+    assert is_link(s)
+    if s==empty:
+        return s
+    return str(first(s))+separator+join_link(rest(s),separator)
+
+print(join_link(four,','))
