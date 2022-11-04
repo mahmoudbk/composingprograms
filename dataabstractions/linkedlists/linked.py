@@ -84,3 +84,36 @@ def get_item_recursive(s,i):
         return first(s)
  
     return get_item_recursive(rest(s),i-1)
+
+
+#using recursion in order to extend a linked list 
+def extend_link(s,t):
+    assert is_link(s) and is_link(t)
+
+    if s==empty:
+        return t
+    return link(first(s),extend_link(rest(s),t))
+"""
+>>> extend_link(four,four)
+[1, [2, [3, [4, [1, [2, [3, [4, 'empty']]]]]]]]
+"""
+#applying a certain function to all elements of the list
+def apply_to_all_link(f,s):
+    assert is_link(s)
+
+    if s==empty:
+        return s
+    return link(f(first(s)), apply_to_all_link(f, rest(s)))
+"""
+>>> apply_to_all_link(lambda x: x*x, four)
+[1, [4, [9, [16, 'empty']]]]
+"""
+def keep_if_link(f,s):
+    """Return a list with elements of s for which f(e) is true."""
+    assert is_link(s)
+    if s==empty:
+        return s
+    else :
+        if (f(s)):
+            return link(f(first(s)),keep_if_link(rest(s),f))
+    
