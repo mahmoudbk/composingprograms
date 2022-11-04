@@ -132,6 +132,10 @@ def join_link(s,separator):
     assert is_link(s)
     if s==empty:
         return s
+    elif rest(s)==empty:
+        return str(first(s))
     return str(first(s))+separator+join_link(rest(s),separator)
-
-print(join_link(four,','))
+"""
+>>> join_link(four,',')
+1,2,3,4, empty
+"""
